@@ -10,11 +10,56 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     @apply font-sans bg-white text-primary;
   }
   h1, h2, h3, h4 {
     @apply font-serif;
+  }
+
+  /* Accessible focus-visible styles for keyboard navigation */
+  *:focus-visible {
+    outline: 2px solid #fbbf24;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Skip-to-content link for screen readers / keyboard users */
+  .skip-to-content {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: 9999;
+    padding: 1rem 1.5rem;
+    background: #fbbf24;
+    color: #0f172a;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 0 0 0.5rem 0;
+  }
+  .skip-to-content:focus {
+    left: 0;
+    top: 0;
+    width: auto;
+    height: auto;
+    overflow: visible;
+  }
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
@@ -25,3 +70,4 @@
 .section-padding {
   @apply py-16 md:py-24 px-6 md:px-12 max-w-7xl mx-auto;
 }
+
