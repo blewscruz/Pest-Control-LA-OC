@@ -184,7 +184,7 @@ const REVIEWS = [
   { id: 6, name: 'Robert W.', date: '1 month ago', rating: 5, text: 'Third pest company I\'ve tried in 2 years. The first two would spray and leave. Elite actually found WHERE the cockroaches were coming from and sealed the entry points. Problem solved for good.', city: 'Aliso Viejo' },
   { id: 7, name: 'Linda G.', date: '2 months ago', rating: 5, text: 'Our realtor recommended them for a pre-sale termite inspection. They found damage the other inspector missed, treated it, and gave us a clean clearance report. Saved our home sale.', city: 'Dana Point' },
   { id: 8, name: 'James T.', date: '2 months ago', rating: 5, text: 'Been on their quarterly plan for a year now. Haven\'t seen a single spider, ant, or roach since they started. The tech even texts me before he comes. Best service experience I\'ve had.', city: 'Rancho Santa Margarita' },
-  { id: 9, name: 'Karen W.', date: '2 months ago', rating: 5, text: 'I found a black widow near my daughter\'s playhouse. Called in a panic. They came SAME DAY and treated the entire perimeter. True professionals who actually care.', city: 'Tustin' },
+  { id: 9, name: 'Karen W.', date: '2 months ago', rating: 5, text: 'I found a black widow near my daughter\'s playhouse. Called in a panic. They came QUICKLY and treated the entire perimeter. True professionals who actually care.', city: 'Tustin' },
   { id: 10, name: 'Steven H.', date: '3 months ago', rating: 5, text: 'Spider webs everywhere — inside, outside, garage. One treatment and they were all gone. They also installed door sweeps and sealed cracks I never would have noticed. Above and beyond.', city: 'Costa Mesa' },
   { id: 11, name: 'Nancy A.', date: '3 months ago', rating: 5, text: 'Moved into a new home and wanted preventive treatment. They did a full inspection, treated inside and out, and set us up on quarterly service. Peace of mind from day one.', city: 'Huntington Beach' },
   { id: 12, name: 'Paul B.', date: '4 months ago', rating: 5, text: 'Had mosquitoes so bad we couldn\'t use our backyard. After their barrier treatment, we hosted a BBQ the next weekend with zero bites. Unbelievable difference.', city: 'San Juan Capistrano' },
@@ -272,7 +272,7 @@ export default function App() {
                 <div className="text-center mb-8">
                   <div className="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-4"><ShieldCheck className="text-primary w-8 h-8" /></div>
                   <h3 id="quote-modal-title" className="text-3xl font-serif text-primary font-bold mb-2">Get Your Free Quote</h3>
-                  <p className="text-primary/60">Same-day service available. No obligation, no contracts.</p>
+                  <p className="text-primary/60">Fast, local response. No obligation, no contracts.</p>
                 </div>
                 <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); setIsModalOpen(false); }}>
                   <div className="grid grid-cols-2 gap-4">
@@ -351,14 +351,14 @@ export default function App() {
               <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
                 <div className="flex flex-wrap gap-3 mb-6">
                   <div className="inline-flex items-center gap-2 bg-accent/20 backdrop-blur-sm border border-accent/30 text-accent px-4 py-1.5 rounded-full">
-                    <Zap className="w-4 h-4" /><span className="text-sm font-bold uppercase tracking-wider">Same-Day Service</span>
+                    <Leaf className="w-4 h-4" /><span className="text-sm font-bold uppercase tracking-wider">Pet & Family Safe</span>
                   </div>
                   <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-4 py-1.5 rounded-full">
                     <ShieldCheck className="w-4 h-4 text-accent" /><span className="text-sm font-bold uppercase tracking-wider">Pest-Free Guarantee</span>
                   </div>
                 </div>
                 <h1 className="text-5xl md:text-7xl text-white font-bold leading-[1.1] mb-6">
-                  Your Home,<br /><span className="text-accent italic">Pest-Free</span><br /><span className="text-white/90">by Tonight.</span>
+                  Your Home,<br /><span className="text-accent italic">Pest-Free</span><br /><span className="text-white/90">Guaranteed.</span>
                 </h1>
                 <p className="text-xl text-white/70 mb-8 max-w-xl leading-relaxed">
                   Orange County's #1 rated pest control. Eco-friendly, pet-safe treatments with a <strong className="text-white">100% Pest-Free Guarantee</strong> — if they come back, so do we. Free.
@@ -409,7 +409,7 @@ export default function App() {
             <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               <div><p className="text-3xl font-bold text-accent">8,247</p><p className="text-white/60 text-sm font-medium">5-Star Reviews</p></div>
               <div><p className="text-3xl font-bold text-accent">15+</p><p className="text-white/60 text-sm font-medium">Years in SoCal</p></div>
-              <div><p className="text-3xl font-bold text-accent">Same Day</p><p className="text-white/60 text-sm font-medium">Service Available</p></div>
+              <div><p className="text-3xl font-bold text-accent">Free</p><p className="text-white/60 text-sm font-medium">Home Inspections</p></div>
               <div><p className="text-3xl font-bold text-accent">100%</p><p className="text-white/60 text-sm font-medium">Satisfaction Guaranteed</p></div>
             </div>
           </div>
@@ -434,7 +434,7 @@ export default function App() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { step: '01', icon: PhoneCall, title: 'Call or Request a Quote', desc: 'Call us at (800) 555-0123 or fill out our 30-second form. We\'ll match you with a local specialist and confirm your appointment — often same-day.' },
+              { step: '01', icon: PhoneCall, title: 'Call or Request a Quote', desc: 'Call us at (800) 555-0123 or fill out our 30-second form. We\'ll match you with a local specialist and confirm your appointment around your schedule.' },
               { step: '02', icon: CalendarCheck, title: 'Free Inspection & Treatment', desc: 'Your licensed technician arrives on time in a branded truck, inspects your property, identifies the pest, and applies targeted, pet-safe treatments.' },
               { step: '03', icon: ShieldCheck, title: 'Guaranteed Pest-Free Home', desc: 'We don\'t just treat — we prevent. If pests return between visits, so do we — free of charge. That\'s our Pest-Free Guarantee.' }
             ].map((item) => (
@@ -503,7 +503,7 @@ export default function App() {
               <div className="space-y-5 mb-10">
                 {[
                   { icon: RefreshCw, text: 'Unlimited free re-treatments if pests return' },
-                  { icon: Clock, text: 'Same-day service when you call before noon' },
+                  { icon: Clock, text: 'Fast response times and flexible scheduling' },
                   { icon: ThumbsUp, text: 'No long-term contracts — cancel anytime' },
                   { icon: PawPrint, text: '100% pet-safe and child-safe products' },
                   { icon: Sparkles, text: '2-year warranty on all termite treatments' }
@@ -683,7 +683,7 @@ export default function App() {
               <li className="flex items-center gap-3"><Phone className="w-5 h-5 text-accent" /><a href="tel:1-800-555-0123" className="hover:text-accent transition-colors">(800) 555-0123</a></li>
               <li className="flex items-center gap-3"><MapPin className="w-5 h-5 text-accent" /><span>Irvine, CA 92618</span></li>
               <li className="flex items-center gap-3"><Clock className="w-5 h-5 text-accent" /><span>Mon-Sat: 7am - 7pm</span></li>
-              <li className="flex items-center gap-3"><Zap className="w-5 h-5 text-accent" /><span className="text-accent font-bold">Same-day service available</span></li>
+              <li className="flex items-center gap-3"><ShieldCheck className="w-5 h-5 text-accent" /><span className="text-accent font-bold">Fully licensed & insured</span></li>
             </ul>
           </div>
         </div>
