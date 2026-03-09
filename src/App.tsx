@@ -346,7 +346,7 @@ export default function App() {
             <img src="/images/hero-home.png" alt="Beautiful Southern California home with lush green yard" className="w-full h-full object-cover" loading="eager" fetchPriority="high" />
             <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/40" />
           </div>
-          <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 pt-32 pb-40 w-full">
+          <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 pt-32 pb-64 md:pb-40 w-full">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
                 <div className="flex flex-wrap gap-3 mb-6">
@@ -371,7 +371,7 @@ export default function App() {
                     Get Free Quote <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-200" />
                   </button>
                 </div>
-                <div className="flex items-center gap-6 text-white/50 text-sm">
+                <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-white/50 text-sm">
                   <div className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-accent" /><span>Free inspections</span></div>
                   <div className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-accent" /><span>No contracts</span></div>
                   <div className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-accent" /><span>$50 off today</span></div>
