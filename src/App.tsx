@@ -434,9 +434,9 @@ export default function App() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { step: '01', icon: PhoneCall, title: 'Call or Request a Quote', desc: 'Call us at (800) 555-0123 or fill out our 30-second form. We\'ll match you with a local specialist and confirm your appointment around your schedule.' },
-              { step: '02', icon: CalendarCheck, title: 'Free Inspection & Treatment', desc: 'Your licensed technician arrives on time in a branded truck, inspects your property, identifies the pest, and applies targeted, pet-safe treatments.' },
-              { step: '03', icon: ShieldCheck, title: 'Guaranteed Pest-Free Home', desc: 'We don\'t just treat — we prevent. If pests return between visits, so do we — free of charge. That\'s our Pest-Free Guarantee.' }
+              { step: '01', icon: Bug, title: 'Free Comprehensive Inspection', desc: 'A licensed specialist will thoroughly inspect your property\'s interior and exterior to identify the exact species, locate nests, and find entry points.' },
+              { step: '02', icon: Leaf, title: 'Custom Treatment Plan', desc: 'Based on our findings, we create a targeted, family-safe action plan to eliminate your specific pest problem at the source—not just cover it up.' },
+              { step: '03', icon: ShieldCheck, title: 'Year-Round Protection', desc: 'We don\'t just eliminate the current infestation. We create a protective barrier around your home and provide ongoing maintenance to ensure pests stay gone for good.' }
             ].map((item) => (
               <motion.div key={item.step} whileHover={{ y: -6 }} className="relative bg-white p-8 pt-10 rounded-3xl border border-slate-100 shadow-lg hover:shadow-2xl hover:border-accent/30 transition-all duration-300 overflow-hidden group">
                 {/* Gold top accent bar */}
